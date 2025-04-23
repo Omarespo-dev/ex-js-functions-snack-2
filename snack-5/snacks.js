@@ -1,6 +1,19 @@
-// Snack 1 Crea una funzione che somma due numeri.
+// Snack 5 Crea una funzione stampaOgniSecondo con setInterval.
 
-//   Crea una funzione dichiarativa chiamata somma che accetta due numeri e restituisce la loro somma
+// Definisci una funzione che accetta un messaggio e lo stampa ogni secondo.
+// Nota: Questa funzione creerà un loop infinito. Interrompilo manualmente o usa clearInterval() in un altro script.
 
-//   Poi, definisci la stessa funzione somma ma come funzione anonima assegnata a una variabile
-//   Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.
+
+function stampaOgniSecondo(mess){
+    return setInterval(() => console.log(mess),1000)
+}
+
+// Avvia l'intervallo con il messaggio "ciao"
+const stampa = stampaOgniSecondo("ciao")
+
+
+// Interrompi dopo 5 secondi (quindi vedremo 5 stampe)
+setTimeout(() => {
+    clearInterval(stampa);
+    console.log("Intervallo interrotto");
+}, 5000);

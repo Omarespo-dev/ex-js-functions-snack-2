@@ -1,6 +1,8 @@
-// Snack 1 Crea una funzione che somma due numeri.
+// Snack 2 Crea una arrow function che calcola il quadrato di un numero.
 
-//   Crea una funzione dichiarativa chiamata somma che accetta due numeri e restituisce la loro somma
+//Definisci una funzione chiamata quadrato che accetta un numero e restituisce il suo quadrato in una sola riga.
 
-//   Poi, definisci la stessa funzione somma ma come funzione anonima assegnata a una variabile
-//   Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.
+const quadrato = (num) => num * num
+
+//console.log
+console.log(quadrato(2))

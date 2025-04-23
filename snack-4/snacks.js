@@ -1,6 +1,17 @@
-// Snack 1 Crea una funzione che somma due numeri.
+// Snack 4 Crea un generatore di funzioni creaTimer
 
-//   Crea una funzione dichiarativa chiamata somma che accetta due numeri e restituisce la loro somma
+// Scrivi una funzione creaTimer che accetta un tempo (in ms) e restituisce una nuova funzione che avvia un setTimeout per stampare "Tempo scaduto!".
 
-//   Poi, definisci la stessa funzione somma ma come funzione anonima assegnata a una variabile
-//   Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.
+function creaTimer(ms){
+    return function(){
+
+        setTimeout(function(){
+            console.log("Tempo Scaduto!")
+        },ms)
+    }
+}
+
+// Chiamo la funzione creaTimer passando 1000ms (1 secondo)
+// e immediatamente eseguo la funzione ritornata con ()
+creaTimer(1000)()
+

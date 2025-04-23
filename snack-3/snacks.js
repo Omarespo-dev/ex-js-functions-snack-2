@@ -1,6 +1,25 @@
-// Snack 1 Crea una funzione che somma due numeri.
+// Snack 3 Crea una funzione eseguiOperazione
 
-//   Crea una funzione dichiarativa chiamata somma che accetta due numeri e restituisce la loro somma
+//Definisci una funzione eseguiOperazione che accetta tre parametri: due numeri e una funzione operatore (callback). 
+// La funzione deve eseguire l'operazione fornita sui due numeri.
 
-//   Poi, definisci la stessa funzione somma ma come funzione anonima assegnata a una variabile
-//   Quindi, riscrivi la funzione somma con la sintassi delle arrow functions.
+
+// Funzione Somma
+function Somma (num1,num2){
+    return num1 + num2
+}
+
+// Funzione Moltiplica
+function Moltiplica (num1,num2){
+    return num1 * num2
+}
+
+// FUNZIONE DOVE PASSIAMO LA CALLBACK CHE SARA O SOMMA O MOLTIPLICA
+function eseguiOperazione(num1,num2,callback){
+    return callback (num1,num2)
+}
+
+
+// CONSOLE.LOG DI OGNUNO
+console.log(eseguiOperazione(2,2,Somma))
+console.log(eseguiOperazione(2,7,Moltiplica))
